@@ -1,0 +1,100 @@
+/* ============================================================
+   Responsive Breakpoints
+   ============================================================
+   All @media queries consolidated in one place.
+
+   Breakpoints used:
+   - max-width: 1024px  → tablets / small laptops
+   - max-width: 768px   → large phones / portrait tablets
+   - max-width: 640px   → small phones
+   ============================================================ */
+
+
+/* -----------------------------------------------------------
+   Tablet (≤ 1024px)
+   ----------------------------------------------------------- */
+@media (max-width: 1024px) {
+  /* About: stack columns vertically */
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  /* Process: 2-column grid */
+  .process__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Learning: 2-column grid */
+  .learning__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* -----------------------------------------------------------
+   Large phones (≤ 768px)
+   ----------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Navigation: hide desktop links, show hamburger */
+  .nav__links {
+    display: none;
+  }
+
+  .nav__hamburger {
+    display: flex;
+  }
+
+  /* Journey: collapse timeline to single column */
+  .journey__line {
+    display: none;
+  }
+
+  .journey__dot {
+    display: none;
+  }
+
+  .journey__item {
+    grid-template-columns: 1fr;
+  }
+
+  .journey__year-col {
+    margin-bottom: 0.75rem;
+  }
+
+  .journey__content {
+    padding-left: 0;
+  }
+}
+
+
+/* -----------------------------------------------------------
+   Small phones (≤ 640px)
+   ----------------------------------------------------------- */
+@media (max-width: 640px) {
+  /* Process: single column */
+  .process__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Learning: single column */
+  .learning__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* -----------------------------------------------------------
+   Desktop only (≥ 1024px)
+   ----------------------------------------------------------- */
+@media (min-width: 1024px) {
+  /* Projects: side-by-side layout */
+  .project {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .project--reverse {
+    flex-direction: row-reverse;
+  }
+}

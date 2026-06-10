@@ -1,0 +1,54 @@
+/* ============================================================
+   Design Tokens — CSS Custom Properties
+   ============================================================
+   Edit these variables to change colors, fonts and spacing
+   across the entire portfolio in one place.
+   ============================================================ */
+
+:root {
+  /* --- Colors --- */
+  --color-bg:           #001419;
+  --color-bg-dark:      #000E13;
+  --color-bg-card:      #011D24;
+  --color-text:         #DFF2F7;
+  --color-accent:       #00D4FF;
+
+  /* Text with opacity — used for body copy, muted labels, etc. */
+  --color-text-muted:   rgba(223, 242, 247, 0.52);
+  --color-text-faded:   rgba(223, 242, 247, 0.48);
+  --color-text-subtle:  rgba(223, 242, 247, 0.45);
+  --color-text-ghost:   rgba(223, 242, 247, 0.4);
+  --color-text-dim:     rgba(223, 242, 247, 0.3);
+  --color-text-whisper: rgba(223, 242, 247, 0.25);
+
+  /* Accent with opacity — borders, glows, hover states */
+  --color-accent-70:    rgba(0, 212, 255, 0.7);
+  --color-accent-60:    rgba(0, 212, 255, 0.6);
+  --color-accent-55:    rgba(0, 212, 255, 0.55);
+  --color-accent-50:    rgba(0, 212, 255, 0.5);
+  --color-accent-32:    rgba(0, 212, 255, 0.32);
+  --color-accent-25:    rgba(0, 212, 255, 0.25);
+  --color-accent-18:    rgba(0, 212, 255, 0.18);
+  --color-accent-15:    rgba(0, 212, 255, 0.15);
+  --color-accent-12:    rgba(0, 212, 255, 0.12);
+  --color-accent-10:    rgba(0, 212, 255, 0.1);
+  --color-accent-08:    rgba(0, 212, 255, 0.08);
+  --color-accent-06:    rgba(0, 212, 255, 0.06);
+  --color-accent-04:    rgba(0, 212, 255, 0.04);
+  --color-accent-03:    rgba(0, 212, 255, 0.03);
+
+  /* --- Fonts --- */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* --- Spacing --- */
+  --section-padding:    9rem 1.5rem;
+  --container-max:      1200px;
+  --container-narrow:   900px;
+
+  /* --- Transitions --- */
+  --transition-fast:    0.2s ease;
+  --transition-normal:  0.3s ease;
+  --transition-slow:    0.5s ease;
+  --transition-reveal:  0.9s ease;
+}

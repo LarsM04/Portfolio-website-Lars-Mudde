@@ -1,0 +1,95 @@
+/* ============================================================
+   Animations & Reveal Classes
+   ============================================================
+   All @keyframes definitions and the IntersectionObserver-driven
+   reveal classes live here.
+   
+   GSAP UPGRADE NOTE:
+   If you want to replace the CSS-based reveals with GSAP later:
+   1. Add <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+   2. Add the ScrollTrigger plugin similarly
+   3. In js/animations.js, replace the IntersectionObserver with
+      gsap.from('.reveal', { y: 40, opacity: 0, stagger: 0.1,
+        scrollTrigger: { trigger: '.reveal', start: 'top 85%' }
+      });
+   4. You can then remove these CSS reveal classes if desired.
+   ============================================================ */
+
+
+/* --- Keyframe Animations --- */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  100% { transform: scaleY(1); transform-origin: top; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+
+/* --- Scroll Reveal Classes ---
+   These work with the IntersectionObserver in js/animations.js.
+   Elements start invisible and slide in when they enter the viewport. */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity var(--transition-reveal), transform var(--transition-reveal);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity var(--transition-reveal), transform var(--transition-reveal);
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* --- Staggered Reveal Delays ---
+   Add delay-1 through delay-6 alongside .reveal to stagger
+   multiple elements appearing in sequence. */
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
