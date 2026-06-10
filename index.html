@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lars Mudde — Portfolio</title>
+  <meta name="description" content="Portfolio website van Lars Mudde — Front-End Developer. Ontdek mijn projecten, werkproces en vaardigheden." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">L·M</a>
+
+      <ul class="nav__links">
+        <li><a href="#projects" class="nav__link">Work</a></li>
+        <li><a href="#process" class="nav__link">Process</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle menu">
+        <!-- Hamburger icon (Menu) -->
+        <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="6" x2="20" y2="6"/>
+          <line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+        <!-- Close icon (X) -->
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="nav__mobile" id="mobile-menu">
+      <a href="#projects" class="nav__mobile-link">Work</a>
+      <a href="#process" class="nav__mobile-link">Process</a>
+      <a href="#contact" class="nav__mobile-link">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero">
+    <div class="hero__glow-top"></div>
+    <div class="hero__glow-bottom"></div>
+
+    <div class="hero__content">
+      <span class="hero__badge">Front-End Developer · Beschikbaar voor werk</span>
+
+      <h1 class="hero__title">
+        Crafting digital<br>
+        <em>experiences</em> that endure.
+      </h1>
+
+      <p class="hero__desc">
+        Ik ben Lars Mudde — een front-end developer die geeft om de
+        kruising van design en engineering. Ik bouw interfaces die
+        intentioneel, toegankelijk en levendig aanvoelen.
+      </p>
+
+      <a href="#projects" class="hero__cta">
+        Bekijk mijn werk
+        <!-- Arrow Down icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <polyline points="19 12 12 19 5 12"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="hero__scroll">
+      <span class="hero__scroll-text">Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ============================================
+       ABOUT
+       ============================================ -->
+  <section class="about" id="about">
+    <div class="about__glow"></div>
+
+    <div class="container">
+      <div class="about__grid">
+        <!-- Text -->
+        <div class="reveal">
+          <span class="section-label">01 / Over Mij</span>
+
+          <h2 class="section-title">
+            Ik geloof dat goede code en
+            <em>goed design</em>
+            dezelfde discipline zijn.
+          </h2>
+
+          <div class="about__text-block">
+            <p>
+              Ik begon met bouwen voor het web omdat ik gefascineerd was door hoe
+              een paar regels code iets konden produceren dat iemand ziet, voelt
+              en waarmee interactie heeft. Die fascinatie is niet verdwenen — ze is verscherpt.
+            </p>
+            <p>
+              Vandaag werk ik op het snijvlak van design systems en product
+              engineering. Ik geef om de dingen die makkelijk te missen zijn: laadprestaties,
+              toetsenbordnavigatie, de 12ms vertraging die een animatie verkeerd doet aanvoelen.
+            </p>
+            <p>
+              Buiten code word ik aangetrokken door architectuur, typografie en
+              alles wat met een ongewoon niveau van zorg is gemaakt.
+            </p>
+          </div>
+
+          <div class="about__tags">
+            <span class="about__tag">React</span>
+            <span class="about__tag">TypeScript</span>
+            <span class="about__tag">Design Systems</span>
+            <span class="about__tag">Accessibility</span>
+            <span class="about__tag">Performance</span>
+            <span class="about__tag">CSS Architecture</span>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="about__image-wrap reveal-right">
+          <div class="about__image-container">
+            <img
+              src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=900&h=1100&fit=crop&auto=format"
+              alt="Code op een monitor in een developer workspace"
+              loading="lazy"
+            />
+            <div class="about__image-overlay"></div>
+          </div>
+          <div class="about__image-accent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ============================================
+       JOURNEY
+       ============================================ -->
+  <section class="journey" id="journey">
+    <div class="journey__glow"></div>
+
+    <div class="container--narrow">
+      <div class="reveal" style="margin-bottom: 5rem;">
+        <span class="section-label section-label--sm">02 / Mijn Reis</span>
+        <h2 class="section-title section-title--md section-title--narrow">
+          Groei is niet lineair. Maar terugkijkend,
+          <em>was elke stap verbonden.</em>
+        </h2>
+      </div>
+
+      <!-- Timeline -->
+      <div class="journey__timeline">
+        <div class="journey__line"></div>
+
+        <!-- Milestone 1 -->
+        <div class="journey__item reveal delay-1">
+          <div class="journey__year-col">
+            <span class="journey__year">2019</span>
+            <div class="journey__dot"></div>
+          </div>
+          <div class="journey__content">
+            <h3 class="journey__role">B.Sc. Computer Science</h3>
+            <span class="journey__org">Universiteit</span>
+            <p class="journey__desc">
+              Ontdekte front-end development in mijn eerste semester en keek nooit meer terug.
+              Bouwde kleine tools, browser extensions en genoeg slechte websites om te leren
+              wat echt belangrijk is.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="journey__item reveal delay-2">
+          <div class="journey__year-col">
+            <span class="journey__year">2021</span>
+            <div class="journey__dot"></div>
+          </div>
+          <div class="journey__content">
+            <h3 class="journey__role">Freelance Web Developer</h3>
+            <span class="journey__org">Zelfstandig</span>
+            <p class="journey__desc">
+              Begon met het aannemen van klantwerk — voornamelijk kleine bedrijven en startups.
+              Bouwde mijn eerste echte projecten en leerde dat gebruikers belangrijker zijn dan
+              elegante code.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="journey__item reveal delay-3">
+          <div class="journey__year-col">
+            <span class="journey__year">2022</span>
+            <div class="journey__dot"></div>
+          </div>
+          <div class="journey__content">
+            <h3 class="journey__role">Junior Front-End Developer</h3>
+            <span class="journey__org">Horizon Digital · Amsterdam</span>
+            <p class="journey__desc">
+              Trad toe tot een 14-koppig bureau dat werkte aan campagnesites met veel verkeer.
+              Leerde over performance budgets, cross-browser consistentie en de realiteit van
+              productie-codebases.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="journey__item reveal delay-4">
+          <div class="journey__year-col">
+            <span class="journey__year">2023</span>
+            <div class="journey__dot"></div>
+          </div>
+          <div class="journey__content">
+            <h3 class="journey__role">Mid-level Developer</h3>
+            <span class="journey__org">Construct Studio · Amsterdam</span>
+            <p class="journey__desc">
+              Leidde front-end op meerdere productlanceringen. Introduceerde ons eerste
+              interne design system. Eerste keer dat ik een andere developer begeleidde —
+              nederig op de beste manier.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 5 -->
+        <div class="journey__item reveal delay-5">
+          <div class="journey__year-col">
+            <span class="journey__year">2024 → Nu</span>
+            <div class="journey__dot"></div>
+          </div>
+          <div class="journey__content">
+            <h3 class="journey__role">Senior Front-End Developer</h3>
+            <span class="journey__org">Fathom · Remote</span>
+            <p class="journey__desc">
+              Architectuur van front-end infrastructuur voor een B2B analytics platform.
+              Component libraries bouwen, engineering standaarden vaststellen, snel shippen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ============================================
+       PROJECTS
+       ============================================ -->
+  <section class="projects" id="projects">
+    <div class="projects__glow"></div>
+
+    <div class="container">
+      <div class="projects__header reveal">
+        <span class="section-label section-label--sm">03 / Uitgelichte Projecten</span>
+        <h2 class="section-title section-title--md" style="max-width: 480px;">
+          Werk waar ik
+          <em>trots op ben.</em>
+        </h2>
+      </div>
+
+      <!-- Project 1 — Meridian -->
+      <div class="project reveal">
+        <div class="project__text">
+          <div class="project__header">
+            <span class="project__number">01</span>
+            <span class="project__tagline">Financial analytics platform</span>
+          </div>
+          <h3 class="project__name">Meridian</h3>
+          <p class="project__desc">
+            De klant had een manier nodig voor niet-technische stakeholders om complexe
+            portfoliodata in één oogopslag te begrijpen. Ik bouwde een real-time analytics
+            dashboard met custom D3.js visualisaties, een flexibel filtersysteem en een
+            component library die schaalde over vier interne producten.
+          </p>
+          <div class="project__stack">
+            <span class="project__tech">React</span>
+            <span class="project__tech">TypeScript</span>
+            <span class="project__tech">D3.js</span>
+            <span class="project__tech">WebSockets</span>
+            <span class="project__tech">Tailwind CSS</span>
+          </div>
+          <div class="project__meta">
+            <span class="project__role-year">Lead Front-End Developer · 2023</span>
+            <button class="project__case-study">
+              Case study
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="project__image-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1720962158813-29b66b8e23e1?w=1200&h=800&fit=crop&auto=format"
+            alt="Dark analytics dashboard UI op scherm"
+            loading="lazy"
+          />
+          <div class="project__image-gradient"></div>
+          <div class="project__image-border"></div>
+        </div>
+      </div>
+
+      <!-- Project 2 — Atelier -->
+      <div class="project project--reverse reveal">
+        <div class="project__text">
+          <div class="project__header">
+            <span class="project__number">02</span>
+            <span class="project__tagline">Luxury e-commerce platform</span>
+          </div>
+          <h3 class="project__name">Atelier</h3>
+          <p class="project__desc">
+            Een onafhankelijk Frans modehuis had een digitale etalage nodig die overeenkwam
+            met de precisie van hun fysieke ervaring. Ik herbouwde hun platform vanaf nul met
+            redactioneel verhalen vertellen als primair ontwerpprincipe, wat resulteerde in 34%
+            toename in gemiddelde sessiediepte en 21% verbetering in checkout conversie.
+          </p>
+          <div class="project__stack">
+            <span class="project__tech">Next.js</span>
+            <span class="project__tech">Framer Motion</span>
+            <span class="project__tech">Shopify Hydrogen</span>
+            <span class="project__tech">GSAP</span>
+          </div>
+          <div class="project__meta">
+            <span class="project__role-year">Front-End Developer · Freelance · 2024</span>
+            <button class="project__case-study">
+              Case study
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="project__image-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1664076458686-3449062080ac?w=1200&h=800&fit=crop&auto=format"
+            alt="Redactionele modefotografie voor luxe merk"
+            loading="lazy"
+          />
+          <div class="project__image-gradient"></div>
+          <div class="project__image-border"></div>
+        </div>
+      </div>
+
+      <!-- Project 3 — Basis -->
+      <div class="project reveal">
+        <div class="project__text">
+          <div class="project__header">
+            <span class="project__number">03</span>
+            <span class="project__tagline">Design system voor een fintech scale-up</span>
+          </div>
+          <h3 class="project__name">Basis</h3>
+          <p class="project__desc">
+            Acht engineers leverden conflicterende UI-patronen af zonder gedeelde basis.
+            Ik ontwierp en bouwde een volledig gedocumenteerde component library vanaf de
+            eerste principes — 40+ componenten, semantische kleurtokens, dark/light thema's
+            en een Storybook-integratie die het systeem binnen twee sprints de standaard van
+            het team maakte.
+          </p>
+          <div class="project__stack">
+            <span class="project__tech">React</span>
+            <span class="project__tech">Radix UI</span>
+            <span class="project__tech">CSS Variables</span>
+            <span class="project__tech">Storybook</span>
+            <span class="project__tech">TypeScript</span>
+          </div>
+          <div class="project__meta">
+            <span class="project__role-year">Design Systems Engineer · 2024</span>
+            <button class="project__case-study">
+              Case study
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="project__image-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1605106901227-991bd663255c?w=1200&h=800&fit=crop&auto=format"
+            alt="Kleurrijke design system component blokken"
+            loading="lazy"
+          />
+          <div class="project__image-gradient"></div>
+          <div class="project__image-border"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ============================================
+       HOW I WORK
+       ============================================ -->
+  <section class="process" id="process">
+    <div class="process__glow"></div>
+
+    <div class="container">
+      <div class="reveal" style="margin-bottom: 5.5rem;">
+        <span class="section-label section-label--sm">04 / Hoe Ik Werk</span>
+        <h2 class="section-title section-title--md" style="max-width: 500px;">
+          Proces is hoe goede intenties
+          <em>goede software</em> worden.
+        </h2>
+      </div>
+
+      <div class="process__grid">
+        <!-- Step 1 -->
+        <div class="process__step reveal delay-1">
+          <div class="process__step-accent"></div>
+          <span class="process__step-number">01</span>
+          <h3 class="process__step-title">Ontdekken</h3>
+          <p class="process__step-desc">
+            Ik begin met luisteren. Het probleem, de beperkingen en de betrokken
+            mensen begrijpen voordat ik een tekstbewerker aanraak. Goede vragen
+            besparen meer tijd dan snel typen.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process__step reveal delay-2">
+          <div class="process__step-accent"></div>
+          <span class="process__step-number">02</span>
+          <h3 class="process__step-title">Definiëren</h3>
+          <p class="process__step-desc">
+            Ik breng de oplossingsarchitectuur, componenthiërarchie en interactieflows
+            in kaart voordat ik productiecode schrijf. Een duidelijk plan is geen
+            overhead — het is snelheid.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process__step reveal delay-3">
+          <div class="process__step-accent"></div>
+          <span class="process__step-number">03</span>
+          <h3 class="process__step-title">Bouwen</h3>
+          <p class="process__step-desc">
+            Ik werk in korte iteraties en lever werkende software vroeg en vaak op.
+            Ik geloof in code review, pair programming en de waarde van een tweede
+            paar ogen.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process__step reveal delay-4">
+          <div class="process__step-accent"></div>
+          <span class="process__step-number">04</span>
+          <h3 class="process__step-title">Verfijnen</h3>
+          <p class="process__step-desc">
+            Ik ben geobsedeerd door de details — prestaties, toegankelijkheid en de
+            micro-interacties die een interface levendig laten aanvoelen. Vakmanschap
+            is wat goed van onvergetelijk scheidt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ============================================
+       LEARNING
+       ============================================ -->
+  <section class="learning" id="learning">
+    <div class="learning__glow"></div>
+
+    <div class="container">
+      <div class="reveal" style="margin-bottom: 5rem;">
+        <span class="section-label section-label--sm">05 / Momenteel Aan Het Leren</span>
+        <h2 class="section-title section-title--md section-title--narrow">
+          Ik wil nooit stoppen met
+          <em>nieuwsgierig</em> zijn.
+        </h2>
+      </div>
+
+      <div class="learning__grid">
+        <!-- Card 1 — WebGL & Three.js -->
+        <div class="learning__card reveal delay-1">
+          <div class="learning__icon">
+            <!-- Layers icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+          </div>
+          <h3 class="learning__card-title">WebGL & Three.js</h3>
+          <p class="learning__card-desc">
+            3D-graphics en shaderprogrammering voor interactieve webervaringen
+            die verder gaan dan het platte scherm.
+          </p>
+        </div>
+
+        <!-- Card 2 — Motion Design -->
+        <div class="learning__card reveal delay-2">
+          <div class="learning__icon">
+            <!-- Zap icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <h3 class="learning__card-title">Motion Design</h3>
+          <p class="learning__card-desc">
+            Geavanceerde animatieprincipes — veerfysica, gechoreografeerde sequenties
+            en de kunst van timing.
+          </p>
+        </div>
+
+        <!-- Card 3 — Rust -->
+        <div class="learning__card reveal delay-3">
+          <div class="learning__icon">
+            <!-- Terminal icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 17 10 11 4 5"/>
+              <line x1="12" y1="19" x2="20" y2="19"/>
+            </svg>
+          </div>
+          <h3 class="learning__card-title">Rust</h3>
+          <p class="learning__card-desc">
+            Systeemprogrammering om webprestaties op een dieper niveau te begrijpen.
+            Compileren naar WASM voor de browser.
+          </p>
+        </div>
+
+        <!-- Card 4 — TypeScript Patterns -->
+        <div class="learning__card reveal delay-4">
+          <div class="learning__icon">
+            <!-- Code2 icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m18 16 4-4-4-4"/>
+              <path d="m6 8-4 4 4 4"/>
+              <path d="m14.5 4-5 16"/>
+            </svg>
+          </div>
+          <h3 class="learning__card-title">TypeScript Patterns</h3>
+          <p class="learning__card-desc">
+            Geavanceerde generieke types, template literal types en het bouwen van
+            API's die onmogelijk verkeerd te gebruiken zijn.
+          </p>
+        </div>
+
+        <!-- Card 5 — Accessibility -->
+        <div class="learning__card reveal delay-5">
+          <div class="learning__icon">
+            <!-- Eye icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3 class="learning__card-title">Accessibility</h3>
+          <p class="learning__card-desc">
+            WCAG 2.2, ARIA-patronen en testen in de echte wereld met schermlezers.
+            Bouwen voor iedereen.
+          </p>
+        </div>
+
+        <!-- Card 6 — Design Tokens -->
+        <div class="learning__card reveal delay-6">
+          <div class="learning__icon">
+            <!-- Palette icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="13.5" cy="6.5" r=".5"/>
+              <circle cx="17.5" cy="10.5" r=".5"/>
+              <circle cx="8.5" cy="7.5" r=".5"/>
+              <circle cx="6.5" cy="12.5" r=".5"/>
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2Z"/>
+            </svg>
+          </div>
+          <h3 class="learning__card-title">Design Tokens</h3>
+          <p class="learning__card-desc">
+            Theming op schaal met Style Dictionary, multi-brand design systems
+            en token-architectuur.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ============================================
+       CONTACT
+       ============================================ -->
+  <section class="contact" id="contact">
+    <div class="contact__glow-top"></div>
+    <div class="contact__glow-bottom"></div>
+
+    <div class="contact__inner reveal">
+      <span class="section-label" style="margin-bottom: 2.5rem;">06 / Contact</span>
+
+      <h2 class="contact__title">
+        Laten we samen iets<br>
+        <em>moois bouwen.</em>
+      </h2>
+
+      <p class="contact__desc">
+        Ik sta momenteel open voor nieuwe mogelijkheden — een fulltime rol,
+        een freelance project, of gewoon een goed gesprek over iets dat
+        het waard is om te bouwen.
+      </p>
+
+      <!-- Email CTA -->
+      <a href="mailto:hello@larsmudde.dev" class="contact__email">
+        hello@larsmudde.dev
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="7" y1="17" x2="17" y2="7"/>
+          <polyline points="7 7 17 7 17 17"/>
+        </svg>
+      </a>
+
+      <!-- Social links -->
+      <div class="contact__socials">
+        <a href="https://github.com/LarsM04" target="_blank" rel="noopener noreferrer" class="contact__social" aria-label="GitHub">
+          <!-- GitHub icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+            <path d="M9 18c-4.51 2-5-2-7-2"/>
+          </svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact__social" aria-label="LinkedIn">
+          <!-- LinkedIn icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect width="4" height="12" x="2" y="9"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="contact__social" aria-label="X / Twitter">
+          <!-- Twitter/X icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+          </svg>
+          X / Twitter
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer__divider"></div>
+      <div class="footer">
+        <span class="footer__text">© 2025 Lars Mudde</span>
+        <span class="footer__text">Ontworpen &amp; gebouwd met zorg</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+  <script src="script.js"></script>
+</body>
+</html>
