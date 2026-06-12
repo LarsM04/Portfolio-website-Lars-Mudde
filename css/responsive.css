@@ -20,14 +20,14 @@
     gap: 4rem;
   }
 
-  /* Process: 2-column grid */
-  .process__grid {
+  /* Projects: 2-column grid */
+  .projects__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Learning: 2-column grid */
-  .learning__grid {
-    grid-template-columns: repeat(2, 1fr);
+  /* Skills: 3-column grid on tablets */
+  .skills__grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -43,6 +43,18 @@
 
   .nav__hamburger {
     display: flex;
+  }
+
+  /* Projects: single column */
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Skills: 2-column grid */
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   /* Journey: collapse timeline to single column */
@@ -65,6 +77,24 @@
   .journey__content {
     padding-left: 0;
   }
+
+  /* Modal: full width on mobile */
+  .modal__content {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    border: none;
+  }
+
+  .modal__info {
+    padding: 0 1.5rem 2.5rem;
+  }
+
+  .modal__close {
+    top: 1rem;
+    right: 1rem;
+  }
 }
 
 
@@ -72,29 +102,18 @@
    Small phones (≤ 640px)
    ----------------------------------------------------------- */
 @media (max-width: 640px) {
-  /* Process: single column */
-  .process__grid {
-    grid-template-columns: 1fr;
+  /* Skills: 2-column maintained, smaller padding */
+  .skill-card {
+    padding: 1.25rem 0.75rem;
   }
 
-  /* Learning: single column */
-  .learning__grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-/* -----------------------------------------------------------
-   Desktop only (≥ 1024px)
-   ----------------------------------------------------------- */
-@media (min-width: 1024px) {
-  /* Projects: side-by-side layout */
-  .project {
-    flex-direction: row;
-    gap: 3rem;
+  .skill-card__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0.375rem;
   }
 
-  .project--reverse {
-    flex-direction: row-reverse;
+  .skill-card__name {
+    font-size: 0.7rem;
   }
 }

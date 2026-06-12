@@ -19,8 +19,9 @@
         <a href="#" class="nav__logo">L·M</a>
 
         <ul class="nav__links">
-          <li><a href="#projects" class="nav__link">Work</a></li>
-          <li><a href="#process" class="nav__link">Process</a></li>
+          <li><a href="#projects" class="nav__link">Projecten</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#journey" class="nav__link">Mijn Reis</a></li>
           <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
 
@@ -40,8 +41,9 @@
       </div>
 
       <div class="nav__mobile" id="mobile-menu">
-        <a href="#projects" class="nav__mobile-link">Work</a>
-        <a href="#process" class="nav__mobile-link">Process</a>
+        <a href="#projects" class="nav__mobile-link">Projecten</a>
+        <a href="#skills" class="nav__mobile-link">Skills</a>
+        <a href="#journey" class="nav__mobile-link">Mijn Reis</a>
         <a href="#contact" class="nav__mobile-link">Contact</a>
       </div>
     </nav>
@@ -124,10 +126,6 @@
               alles wat met een ongewoon niveau van zorg is gemaakt.
             </p>
           </div>
-
-          <div class="about__tags" id="skills-list">
-            <!-- Rendered dynamically from data/skills.js -->
-          </div>
         </div>
 
         <!-- Image -->
@@ -150,6 +148,70 @@
 
 
   <!-- ============================================
+       PROJECTS
+       ============================================ -->
+  <section class="projects" id="projects">
+    <div class="projects__glow"></div>
+
+    <div class="container">
+      <div class="projects__header reveal">
+        <span class="section-label section-label--sm">02 / Uitgelichte Projecten</span>
+        <h2 class="section-title section-title--md section-title--projects">
+          Werk waar ik
+          <em>trots op ben.</em>
+        </h2>
+      </div>
+
+      <div class="projects__grid" id="projects-list">
+        <!-- Rendered dynamically from data/projects.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__backdrop" id="modal-backdrop"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modal-close" aria-label="Sluiten">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="modal__body" id="modal-body">
+        <!-- Filled dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ============================================
+       SKILLS
+       ============================================ -->
+  <section class="skills" id="skills">
+    <div class="skills__glow"></div>
+
+    <div class="container">
+      <div class="reveal mb-section-header">
+        <span class="section-label section-label--sm">03 / Vaardigheden</span>
+        <h2 class="section-title section-title--md section-title--narrow">
+          De tools en technieken waar ik
+          <em>mee werk.</em>
+        </h2>
+      </div>
+
+      <div class="skills__grid" id="skills-list">
+        <!-- Rendered dynamically from data/skills.js -->
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ============================================
        JOURNEY
        ============================================ -->
   <section class="journey" id="journey">
@@ -157,10 +219,10 @@
 
     <div class="container--narrow">
       <div class="reveal mb-section-header">
-        <span class="section-label section-label--sm">02 / Mijn Reis</span>
+        <span class="section-label section-label--sm">04 / Mijn Reis</span>
         <h2 class="section-title section-title--md section-title--narrow">
-          Groei is niet lineair. Maar terugkijkend,
-          <em>was elke stap verbonden.</em>
+          Opleidingen en ervaring die mij
+          <em>hebben gevormd.</em>
         </h2>
       </div>
 
@@ -178,230 +240,12 @@
 
 
   <!-- ============================================
-       PROJECTS
-       ============================================ -->
-  <section class="projects" id="projects">
-    <div class="projects__glow"></div>
-
-    <div class="container">
-      <div class="projects__header reveal">
-        <span class="section-label section-label--sm">03 / Uitgelichte Projecten</span>
-        <h2 class="section-title section-title--md section-title--projects">
-          Werk waar ik
-          <em>trots op ben.</em>
-        </h2>
-      </div>
-
-      <div id="projects-list">
-        <!-- Rendered dynamically from data/projects.js -->
-      </div>
-    </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-
-  <!-- ============================================
-       HOW I WORK
-       ============================================ -->
-  <section class="process" id="process">
-    <div class="process__glow"></div>
-
-    <div class="container">
-      <div class="reveal mb-section-header-lg">
-        <span class="section-label section-label--sm">04 / Hoe Ik Werk</span>
-        <h2 class="section-title section-title--md section-title--process">
-          Proces is hoe goede intenties
-          <em>goede software</em> worden.
-        </h2>
-      </div>
-
-      <div class="process__grid">
-        <!-- Step 1 -->
-        <div class="process__step reveal delay-1">
-          <div class="process__step-accent"></div>
-          <span class="process__step-number">01</span>
-          <h3 class="process__step-title">Ontdekken</h3>
-          <p class="process__step-desc">
-            Ik begin met luisteren. Het probleem, de beperkingen en de betrokken
-            mensen begrijpen voordat ik een tekstbewerker aanraak. Goede vragen
-            besparen meer tijd dan snel typen.
-          </p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="process__step reveal delay-2">
-          <div class="process__step-accent"></div>
-          <span class="process__step-number">02</span>
-          <h3 class="process__step-title">Definiëren</h3>
-          <p class="process__step-desc">
-            Ik breng de oplossingsarchitectuur, componenthiërarchie en interactieflows
-            in kaart voordat ik productiecode schrijf. Een duidelijk plan is geen
-            overhead — het is snelheid.
-          </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="process__step reveal delay-3">
-          <div class="process__step-accent"></div>
-          <span class="process__step-number">03</span>
-          <h3 class="process__step-title">Bouwen</h3>
-          <p class="process__step-desc">
-            Ik werk in korte iteraties en lever werkende software vroeg en vaak op.
-            Ik geloof in code review, pair programming en de waarde van een tweede
-            paar ogen.
-          </p>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="process__step reveal delay-4">
-          <div class="process__step-accent"></div>
-          <span class="process__step-number">04</span>
-          <h3 class="process__step-title">Verfijnen</h3>
-          <p class="process__step-desc">
-            Ik ben geobsedeerd door de details — prestaties, toegankelijkheid en de
-            micro-interacties die een interface levendig laten aanvoelen. Vakmanschap
-            is wat goed van onvergetelijk scheidt.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-
-  <!-- ============================================
-       LEARNING
-       ============================================ -->
-  <section class="learning" id="learning">
-    <div class="learning__glow"></div>
-
-    <div class="container">
-      <div class="reveal mb-section-header">
-        <span class="section-label section-label--sm">05 / Momenteel Aan Het Leren</span>
-        <h2 class="section-title section-title--md section-title--narrow">
-          Ik wil nooit stoppen met
-          <em>nieuwsgierig</em> zijn.
-        </h2>
-      </div>
-
-      <div class="learning__grid">
-        <!-- Card 1 — WebGL & Three.js -->
-        <div class="learning__card reveal delay-1">
-          <div class="learning__icon">
-            <!-- Layers icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-              <polyline points="2 17 12 22 22 17"/>
-              <polyline points="2 12 12 17 22 12"/>
-            </svg>
-          </div>
-          <h3 class="learning__card-title">WebGL & Three.js</h3>
-          <p class="learning__card-desc">
-            3D-graphics en shaderprogrammering voor interactieve webervaringen
-            die verder gaan dan het platte scherm.
-          </p>
-        </div>
-
-        <!-- Card 2 — Motion Design -->
-        <div class="learning__card reveal delay-2">
-          <div class="learning__icon">
-            <!-- Zap icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-            </svg>
-          </div>
-          <h3 class="learning__card-title">Motion Design</h3>
-          <p class="learning__card-desc">
-            Geavanceerde animatieprincipes — veerfysica, gechoreografeerde sequenties
-            en de kunst van timing.
-          </p>
-        </div>
-
-        <!-- Card 3 — Rust -->
-        <div class="learning__card reveal delay-3">
-          <div class="learning__icon">
-            <!-- Terminal icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="4 17 10 11 4 5"/>
-              <line x1="12" y1="19" x2="20" y2="19"/>
-            </svg>
-          </div>
-          <h3 class="learning__card-title">Rust</h3>
-          <p class="learning__card-desc">
-            Systeemprogrammering om webprestaties op een dieper niveau te begrijpen.
-            Compileren naar WASM voor de browser.
-          </p>
-        </div>
-
-        <!-- Card 4 — TypeScript Patterns -->
-        <div class="learning__card reveal delay-4">
-          <div class="learning__icon">
-            <!-- Code2 icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m18 16 4-4-4-4"/>
-              <path d="m6 8-4 4 4 4"/>
-              <path d="m14.5 4-5 16"/>
-            </svg>
-          </div>
-          <h3 class="learning__card-title">TypeScript Patterns</h3>
-          <p class="learning__card-desc">
-            Geavanceerde generieke types, template literal types en het bouwen van
-            API's die onmogelijk verkeerd te gebruiken zijn.
-          </p>
-        </div>
-
-        <!-- Card 5 — Accessibility -->
-        <div class="learning__card reveal delay-5">
-          <div class="learning__icon">
-            <!-- Eye icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
-              <circle cx="12" cy="12" r="3"/>
-            </svg>
-          </div>
-          <h3 class="learning__card-title">Accessibility</h3>
-          <p class="learning__card-desc">
-            WCAG 2.2, ARIA-patronen en testen in de echte wereld met schermlezers.
-            Bouwen voor iedereen.
-          </p>
-        </div>
-
-        <!-- Card 6 — Design Tokens -->
-        <div class="learning__card reveal delay-6">
-          <div class="learning__icon">
-            <!-- Palette icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="13.5" cy="6.5" r=".5"/>
-              <circle cx="17.5" cy="10.5" r=".5"/>
-              <circle cx="8.5" cy="7.5" r=".5"/>
-              <circle cx="6.5" cy="12.5" r=".5"/>
-              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2Z"/>
-            </svg>
-          </div>
-          <h3 class="learning__card-title">Design Tokens</h3>
-          <p class="learning__card-desc">
-            Theming op schaal met Style Dictionary, multi-brand design systems
-            en token-architectuur.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-
-  <!-- ============================================
        CONTACT
        ============================================ -->
   <section class="contact" id="contact">
     <div class="contact__glow-top"></div>
       <div class="contact__inner reveal">
-      <span class="section-label mb-contact-label">06 / Contact</span>
+      <span class="section-label mb-contact-label">05 / Contact</span>
 
       <h2 class="contact__title">
         Laten we samen iets<br>

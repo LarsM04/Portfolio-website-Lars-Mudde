@@ -10,7 +10,7 @@
    - initAnimations()   → js/animations.js
    - initSmoothScroll() → js/smooth-scroll.js
 
-   IMPORTANT: Data-driven sections (projects, journey) must be
+   IMPORTANT: Data-driven sections (projects, journey, skills) must be
    rendered BEFORE initAnimations() so the IntersectionObserver
    can find the dynamically created .reveal elements.
    ============================================================ */
@@ -19,17 +19,25 @@
   "use strict";
 
   /**
-   * Render skills tags from data/skills.js into the #skills-list container.
+   * Render skills with icons from data/skills.js into the #skills-list container.
    */
   function initSkills() {
     var container = document.getElementById("skills-list");
     if (!container || !window.skillsData) return;
 
     var html = skillsData
-      .map(function (skill) {
-        return '<span class="about__tag">' + skill + '</span>';
+      .map(function (skill, index) {
+        var delayClass = index > 0 ? " delay-" + Math.min(index, 6) : "";
+        return (
+          '<div class="skill-card reveal' + delayClass + '">\n' +
+          '  <div class="skill-card__icon">\n' +
+          "    " + skill.icon + "\n" +
+          "  </div>\n" +
+          '  <span class="skill-card__name">' + skill.name + "</span>\n" +
+          "</div>"
+        );
       })
-      .join("\n            ");
+      .join("\n");
 
     container.innerHTML = html;
   }
