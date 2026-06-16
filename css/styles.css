@@ -411,6 +411,7 @@ button {
 /* About image */
 .about__image-wrap {
   position: relative;
+  cursor: pointer;
 }
 
 .about__image-container {
@@ -418,19 +419,34 @@ button {
   overflow: hidden;
   background: var(--color-bg-card);
   position: relative;
+  border-radius: 12px;
+  border: 1px solid var(--color-accent-08);
 }
 
 .about__image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.5;
+  object-position: center 15%;
+  opacity: 0.75;
+  transition: opacity var(--transition-normal), transform var(--transition-slow);
 }
 
 .about__image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 20, 25, 0.15) 0%, rgba(0, 20, 25, 0.75) 100%);
+  background: linear-gradient(to bottom, rgba(0, 20, 25, 0.05) 0%, rgba(0, 20, 25, 0.6) 100%);
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+}
+
+.about__image-wrap:hover .about__image-container img {
+  opacity: 0.95;
+  transform: scale(1.04);
+}
+
+.about__image-wrap:hover .about__image-overlay {
+  opacity: 0.4;
 }
 
 .about__image-accent {
