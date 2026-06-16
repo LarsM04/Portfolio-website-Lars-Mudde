@@ -20,6 +20,36 @@
 
 var projectsData = [
   {
+    name: "U Festival 2026",
+    tagline: "Progressive Web App — Festival Guide",
+    shortDesc:
+      "Interactieve en offline-beschikbare PWA festivalgids voor het U Festival 2026 in Utrecht, met live programma, interactieve kaart en persoonlijk schema.",
+    desc:
+      "Een interactieve en offline-beschikbare Progressive Web App (PWA) voor het fictieve " +
+      "U Festival 2026 op het Strijkviertel in Utrecht. Gebouwd als moderne, mobiel-vriendelijke " +
+      "festivalgids waarmee bezoekers ter plekke alle praktische en programma-informatie direct " +
+      "bij de hand hebben. De app is volledig client-side gebouwd — geen build-stappen, geen " +
+      "npm-installatie, geen frameworks — met een sterke focus op performance, vloeiende UX " +
+      "en native-achtige mobiele functionaliteit.",
+    highlights: [
+      "Volledig offline beschikbaar via Service Worker caching",
+      "Interactief blokkenschema met favorieten & persoonlijk programma",
+      "SVG-gebaseerde interactieve plattegrond met live GPS-locatie",
+      "Ingebouwde QR-code scanner voor interactie op het terrein",
+      "Light & Dark mode met dynamisch schakelen",
+      "Meertalig: Nederlands 🇳🇱 & Engels 🇬🇧",
+      "Beveiligd Admin CMS voor contentbeheer",
+    ],
+    tech: ["HTML5", "CSS3", "JavaScript", "PWA", "Service Worker", "SVG", "Geolocation API"],
+    role: "Solo Developer · Schoolproject GLU · 2026",
+    image: "assets/images/u-festival-hero.png",
+    imageAlt: "U Festival 2026 — Interactieve festival PWA met programma en kaart",
+    links: {
+      github: "https://github.com/LarsM04/8.1---Module---U-Festival-App",
+      live: "https://u-festival-app.onrender.com",
+    },
+  },
+  {
     name: "Meridian",
     tagline: "Financial analytics platform",
     shortDesc:
