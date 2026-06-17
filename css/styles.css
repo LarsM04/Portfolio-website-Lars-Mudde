@@ -95,7 +95,7 @@ button {
 .section-label {
   display: block;
   font-family: var(--font-body);
-  font-size: 0.675rem;
+  font-size: 0.8rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -168,7 +168,7 @@ button {
 
 .nav__logo {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   letter-spacing: 0.28em;
   color: var(--color-accent);
   font-weight: 500;
@@ -184,9 +184,9 @@ button {
 
 .nav__link {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   letter-spacing: 0.07em;
-  color: rgba(223, 242, 247, 0.5);
+  color: rgba(223, 242, 247, 0.55);
   text-decoration: none;
   transition: color var(--transition-normal);
 }
@@ -226,7 +226,7 @@ button {
 .nav__mobile-link {
   display: block;
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   letter-spacing: 0.05em;
   color: rgba(223, 242, 247, 0.6);
   padding: 0.875rem 0;
@@ -279,7 +279,7 @@ button {
 .hero__badge {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.675rem;
+  font-size: 0.8rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -305,11 +305,11 @@ button {
 
 .hero__desc {
   font-family: var(--font-body);
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.82;
   color: var(--color-text-faded);
-  max-width: 500px;
+  max-width: 520px;
   margin: 0 auto 3.25rem;
   animation: fadeInUp 0.85s ease 0.68s both;
 }
@@ -320,7 +320,7 @@ button {
   gap: 0.75rem;
   padding: 0.9375rem 2.375rem;
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -355,7 +355,7 @@ button {
 
 .hero__scroll-text {
   font-family: var(--font-body);
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
   color: rgba(0, 212, 255, 0.3);
@@ -401,7 +401,7 @@ button {
   flex-direction: column;
   gap: 1.375rem;
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.0625rem;
   font-weight: 300;
   line-height: 1.85;
   color: var(--color-text-muted);
@@ -543,7 +543,7 @@ button {
   top: 1rem;
   left: 1rem;
   font-family: var(--font-body);
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-accent-70);
@@ -571,7 +571,7 @@ button {
 
 .card__desc {
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   font-weight: 300;
   line-height: 1.7;
   color: var(--color-text-muted);
@@ -587,9 +587,9 @@ button {
 
 .card__tech {
   display: inline-block;
-  padding: 0.2rem 0.6rem;
+  padding: 0.25rem 0.65rem;
   font-family: var(--font-body);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.04em;
   color: var(--color-accent-55);
   border: 1px solid var(--color-accent-12);
@@ -606,7 +606,7 @@ button {
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -907,7 +907,7 @@ button {
 .modal__tagline {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -926,7 +926,7 @@ button {
 .modal__role {
   display: block;
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   letter-spacing: 0.04em;
   color: var(--color-accent-55);
   margin-bottom: 1.75rem;
@@ -934,7 +934,7 @@ button {
 
 .modal__desc {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.82;
   color: var(--color-text-muted);
@@ -943,7 +943,7 @@ button {
 
 .modal__subtitle {
   font-family: var(--font-body);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-accent-60);
@@ -963,7 +963,7 @@ button {
 
 .modal__highlights li {
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   font-weight: 300;
   line-height: 1.7;
   color: var(--color-text-subtle);
@@ -1049,7 +1049,7 @@ button {
   display: inline-block;
   padding: 0.3rem 0.8rem;
   font-family: var(--font-body);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   letter-spacing: 0.04em;
   color: var(--color-accent-70);
   border: 1px solid var(--color-accent-18);
@@ -1069,7 +1069,7 @@ button {
   gap: 0.5rem;
   padding: 0.625rem 1.25rem;
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -1162,7 +1162,7 @@ button {
 
 .skill-card__name {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--color-text);
@@ -1223,7 +1223,7 @@ button {
 
 .journey__year {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 0.06em;
   color: var(--color-accent);
   font-weight: 400;
@@ -1258,7 +1258,7 @@ button {
 .journey__org {
   display: block;
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   letter-spacing: 0.04em;
   color: var(--color-accent-55);
   margin-bottom: 0.875rem;
@@ -1266,10 +1266,10 @@ button {
 
 .journey__desc {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.78;
-  color: rgba(223, 242, 247, 0.5);
+  color: rgba(223, 242, 247, 0.55);
 }
 
 
@@ -1326,11 +1326,11 @@ button {
 
 .contact__desc {
   font-family: var(--font-body);
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.8;
   color: var(--color-text-faded);
-  max-width: 480px;
+  max-width: 500px;
   margin: 0 auto 4rem;
 }
 
@@ -1373,7 +1373,7 @@ button {
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   letter-spacing: 0.05em;
   color: var(--color-text-ghost);
   text-decoration: none;
@@ -1408,7 +1408,7 @@ button {
 
 .footer__text {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   letter-spacing: 0.04em;
   color: var(--color-text-whisper);
 }
