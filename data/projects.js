@@ -46,7 +46,7 @@ var projectsData = [
     imageAlt: "U Festival 2026 — Interactieve festival PWA met programma en kaart",
     links: {
       github: "https://github.com/LarsM04/8.1---Module---U-Festival-App",
-      live: "https://u-festival-app.onrender.com",
+      live: "https://eight-1-module-u-festival-app.onrender.com",
     },
   },
   {
