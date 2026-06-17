@@ -78,15 +78,29 @@ function buildProjectModalHTML(project) {
   /* Build highlights list */
   var highlightsHTML = "";
   if (project.highlights && project.highlights.length > 0) {
+    var listItems = project.highlights
+      .map(function (h) {
+        /* Support both string highlights and object highlights with images */
+        var text = typeof h === "string" ? h : h.text;
+        var image = typeof h === "object" && h.image ? h.image : null;
+
+        var liContent = '<span class="modal__highlight-text">' + text + "</span>";
+        if (image) {
+          liContent +=
+            '<div class="modal__highlight-image" data-lightbox="' + image + '" role="button" tabindex="0" aria-label="Vergroot afbeelding">' +
+            '<img src="' + image + '" alt="' + text + '" loading="lazy" />' +
+            '<div class="modal__highlight-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>' +
+            "</div>";
+        }
+        return "    <li" + (image ? ' class="modal__highlight--has-image"' : "") + ">" + liContent + "</li>";
+      })
+      .join("\n");
+
     highlightsHTML =
       '<div class="modal__highlights">\n' +
       '  <h4 class="modal__subtitle">Hoogtepunten</h4>\n' +
       "  <ul>\n" +
-      project.highlights
-        .map(function (h) {
-          return "    <li>" + h + "</li>";
-        })
-        .join("\n") +
+      listItems +
       "\n  </ul>\n" +
       "</div>";
   }
@@ -126,10 +140,21 @@ function buildProjectModalHTML(project) {
     }
   }
 
+  /* Hero thumbnail overlay (e.g. homepage screenshot in the corner) */
+  var heroThumbHTML = "";
+  if (project.heroThumb) {
+    heroThumbHTML =
+      '  <div class="modal__hero-thumb" data-lightbox="' + project.heroThumb + '" role="button" tabindex="0" aria-label="Vergroot screenshot">\n' +
+      '    <img src="' + project.heroThumb + '" alt="App screenshot" />\n' +
+      '    <div class="modal__hero-thumb-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>\n' +
+      '  </div>\n';
+  }
+
   return (
     '<div class="modal__hero">\n' +
     '  <img src="' + project.image + '" alt="' + project.imageAlt + '" />\n' +
     '  <div class="modal__hero-gradient"></div>\n' +
+    heroThumbHTML +
     "</div>\n" +
     '<div class="modal__info">\n' +
     '  <span class="modal__tagline">' + project.tagline + "</span>\n" +
@@ -163,6 +188,9 @@ function openProjectModal(index) {
   modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
 
+  /* Bind lightbox click events on images */
+  bindLightboxEvents(body);
+
   /* Focus the close button for accessibility */
   var closeBtn = document.getElementById("modal-close");
   if (closeBtn) closeBtn.focus();
@@ -178,6 +206,80 @@ function closeProjectModal() {
   modal.classList.remove("active");
   modal.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
+}
+
+/* ============================================================
+   Image Lightbox
+   ============================================================ */
+
+/**
+ * Open a full-screen lightbox for the given image URL.
+ */
+function openLightbox(imageSrc) {
+  /* Remove existing lightbox if any */
+  closeLightbox();
+
+  var overlay = document.createElement("div");
+  overlay.className = "lightbox-overlay";
+  overlay.id = "image-lightbox";
+  overlay.setAttribute("role", "dialog");
+  overlay.setAttribute("aria-modal", "true");
+  overlay.setAttribute("aria-label", "Vergrote afbeelding");
+
+  overlay.innerHTML =
+    '<div class="lightbox__backdrop"></div>' +
+    '<div class="lightbox__content">' +
+    '  <img src="' + imageSrc + '" alt="Vergrote afbeelding" />' +
+    '</div>' +
+    '<button class="lightbox__close" aria-label="Sluiten">' +
+    '  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+    '    <line x1="18" y1="6" x2="6" y2="18"/>' +
+    '    <line x1="6" y1="6" x2="18" y2="18"/>' +
+    '  </svg>' +
+    '</button>';
+
+  document.body.appendChild(overlay);
+
+  /* Trigger reflow for animation */
+  overlay.offsetHeight;
+  overlay.classList.add("active");
+
+  /* Close on backdrop click */
+  overlay.querySelector(".lightbox__backdrop").addEventListener("click", closeLightbox);
+  overlay.querySelector(".lightbox__close").addEventListener("click", closeLightbox);
+}
+
+/**
+ * Close the lightbox overlay.
+ */
+function closeLightbox() {
+  var overlay = document.getElementById("image-lightbox");
+  if (!overlay) return;
+
+  overlay.classList.remove("active");
+  setTimeout(function () {
+    if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+  }, 300);
+}
+
+/**
+ * Bind click events on all elements with data-lightbox attribute.
+ */
+function bindLightboxEvents(container) {
+  var triggers = container.querySelectorAll("[data-lightbox]");
+  triggers.forEach(function (trigger) {
+    trigger.addEventListener("click", function (e) {
+      e.stopPropagation();
+      openLightbox(trigger.getAttribute("data-lightbox"));
+    });
+    trigger.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        e.stopPropagation();
+        openLightbox(trigger.getAttribute("data-lightbox"));
+      }
+    });
+  });
 }
 
 /**
@@ -230,7 +332,13 @@ function initProjects() {
   /* Close on Escape key */
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
-      closeProjectModal();
+      /* Close lightbox first if open, otherwise close modal */
+      var lightbox = document.getElementById("image-lightbox");
+      if (lightbox) {
+        closeLightbox();
+      } else {
+        closeProjectModal();
+      }
     }
   });
 }
