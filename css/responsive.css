@@ -95,6 +95,16 @@
     top: 1rem;
     right: 1rem;
   }
+
+  /* Contact form: single column */
+  .contact__form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact__form-row .contact__form-group {
+    margin-bottom: 1.25rem;
+  }
 }
 
 
@@ -117,3 +127,4 @@
     font-size: 0.7rem;
   }
 }
+

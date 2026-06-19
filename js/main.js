@@ -42,13 +42,40 @@
     container.innerHTML = html;
   }
 
+  /**
+   * Render soft skills from data/skills.js into the #soft-skills-list container.
+   */
+  function initSoftSkills() {
+    var container = document.getElementById("soft-skills-list");
+    if (!container || !window.softSkillsData) return;
+
+    var html = softSkillsData
+      .map(function (skill, index) {
+        var delayClass = index > 0 ? " delay-" + Math.min(index, 6) : "";
+        return (
+          '<div class="skill-card skill-card--soft reveal' + delayClass + '">\n' +
+          '  <div class="skill-card__icon">\n' +
+          "    " + skill.icon + "\n" +
+          "  </div>\n" +
+          '  <span class="skill-card__name">' + skill.name + "</span>\n" +
+          "</div>"
+        );
+      })
+      .join("\n");
+
+    container.innerHTML = html;
+  }
+
   // 1. Render data-driven sections first
   initProjects();
   initJourney();
   initSkills();
+  initSoftSkills();
 
   // 2. Then initialise interactive behaviour
   initNavigation();
   initAnimations();
   initSmoothScroll();
+  initContact();
 })();
+

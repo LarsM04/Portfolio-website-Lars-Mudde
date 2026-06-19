@@ -42,6 +42,8 @@ var projectsData = [
     ],
     tech: ["HTML5", "CSS3", "JavaScript", "PWA", "Service Worker", "SVG", "Geolocation API"],
     role: "Solo Developer · Schoolproject GLU · 2026",
+    teamType: "solo",
+    roleDescription: "Volledig zelfstandig ontworpen, ontwikkeld en opgeleverd als schoolproject bij het Grafisch Lyceum Utrecht.",
     image: "assets/images/u-festival-hero.png",
     heroThumb: "assets/images/project-images/eight-1-module-u-festival-app.onrender.com_(iPhone 14 Pro Max).png",
     imageAlt: "U Festival 2026 — Interactieve festival PWA met programma en kaart",
@@ -68,6 +70,9 @@ var projectsData = [
     ],
     tech: ["React", "TypeScript", "D3.js", "WebSockets", "Tailwind CSS"],
     role: "Lead Front-End Developer · 2023",
+    teamType: "team",
+    teamSize: 4,
+    roleDescription: "Verantwoordelijk voor alle front-end architectuur en D3.js visualisaties in een team van 4 developers.",
     image:
       "https://images.unsplash.com/photo-1720962158813-29b66b8e23e1?w=1200&h=800&fit=crop&auto=format",
     imageAlt: "Dark analytics dashboard UI op scherm",
@@ -93,6 +98,8 @@ var projectsData = [
     ],
     tech: ["Next.js", "Framer Motion", "Shopify Hydrogen", "GSAP"],
     role: "Front-End Developer · Freelance · 2024",
+    teamType: "solo",
+    roleDescription: "Als freelancer het volledige platform herbouwd, van concept tot oplevering.",
     image:
       "https://images.unsplash.com/photo-1664076458686-3449062080ac?w=1200&h=800&fit=crop&auto=format",
     imageAlt: "Redactionele modefotografie voor luxe merk",
@@ -119,6 +126,9 @@ var projectsData = [
     ],
     tech: ["React", "Radix UI", "CSS Variables", "Storybook", "TypeScript"],
     role: "Design Systems Engineer · 2024",
+    teamType: "team",
+    teamSize: 8,
+    roleDescription: "Design system architect in een team van 8 engineers. Verantwoordelijk voor componentontwerp, documentatie en Storybook-integratie.",
     image:
       "https://images.unsplash.com/photo-1605106901227-991bd663255c?w=1200&h=800&fit=crop&auto=format",
     imageAlt: "Kleurrijke design system component blokken",

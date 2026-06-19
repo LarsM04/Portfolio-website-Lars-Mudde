@@ -150,6 +150,22 @@ function buildProjectModalHTML(project) {
       '  </div>\n';
   }
 
+  /* Build team/solo badge */
+  var teamBadgeHTML = "";
+  if (project.teamType) {
+    var badgeClass = project.teamType === "solo" ? "modal__badge--solo" : "modal__badge--team";
+    var badgeLabel = project.teamType === "solo"
+      ? "Solo Project"
+      : "Teamproject" + (project.teamSize ? " · " + project.teamSize + " personen" : "");
+    teamBadgeHTML = '  <span class="modal__badge ' + badgeClass + '">' + badgeLabel + "</span>\n";
+  }
+
+  /* Build role description */
+  var roleDescHTML = "";
+  if (project.roleDescription) {
+    roleDescHTML = '  <p class="modal__role-desc">' + project.roleDescription + "</p>\n";
+  }
+
   return (
     '<div class="modal__hero">\n' +
     '  <img src="' + project.image + '" alt="' + project.imageAlt + '" />\n' +
@@ -160,6 +176,8 @@ function buildProjectModalHTML(project) {
     '  <span class="modal__tagline">' + project.tagline + "</span>\n" +
     '  <h2 class="modal__title">' + project.name + "</h2>\n" +
     '  <span class="modal__role">' + project.role + "</span>\n" +
+    teamBadgeHTML +
+    roleDescHTML +
     '  <p class="modal__desc">' + project.desc + "</p>\n" +
     highlightsHTML + "\n" +
     '  <div class="modal__stack">\n' +
